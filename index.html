@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function ValidateAccount(str) {
+        regexp =  /^[_a-z0-9]{6,}$/;
+        return regexp.test(str);
+    };
+
+    let account1 = "123abc_";
+   console.log(ValidateAccount(account1));
+   let account2 = ".@";
+   console.log(ValidateAccount(account2));
+
+
+   let arrAccount = ["123abc_","_abc123","______","123456","abcdefg",".@","12345"];
+   for (let i=0 ; i<arrAccount.length; i++) {
+       document.write("Tai khoan " + arrAccount[i] + "dc xác nhận " + ValidateAccount(arrAccount[i]) + "<br>");
+   }
+</script>
+</body>
+</html>
